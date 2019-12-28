@@ -1,3 +1,3 @@
-## [1.0.0] - TODO: Add release date.
+## [1.0.0] - 28.12.2019.
 
 * Initial Open Source release.
