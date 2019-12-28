@@ -1,0 +1,23 @@
+name: example
+description: A project used to demo the flutter_driver_helper
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.3.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_driver:
+    sdk: flutter
+  test: any
+  flutter_driver_helper:
+    path: ../
+
+flutter:
+  uses-material-design: true
