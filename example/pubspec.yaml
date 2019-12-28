@@ -15,7 +15,7 @@ dev_dependencies:
     sdk: flutter
   flutter_driver:
     sdk: flutter
-  test: any
+  test: ^1.9.4
   flutter_driver_helper:
     path: ../
 

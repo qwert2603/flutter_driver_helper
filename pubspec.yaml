@@ -10,4 +10,4 @@ environment:
 dependencies:
   flutter_driver:
     sdk: flutter
-  test: any
+  test: ^1.9.4
