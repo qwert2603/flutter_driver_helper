@@ -1,4 +1,4 @@
-# flutter_driver_helper
+# Flutter Driver Helper
 
 Utility for easy work with flutter_driver in UI / integration tests
 
