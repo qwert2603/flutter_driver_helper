@@ -6,6 +6,8 @@ Utility for easy work with flutter_driver in UI / integration tests
 
 Flutter Driver Helper has several useful utilities for writing UI / integration tests.
 
+From Android's point of view, Flutter Driver is like [Espresso](https://developer.android.com/training/testing/espresso), while Flutter Driver Helper acts like [Kakao](https://github.com/agoda-com/Kakao).
+
 Usual Flutter Driver test looks like
 
 ```dart
