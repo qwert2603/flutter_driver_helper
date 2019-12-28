@@ -66,8 +66,8 @@ class DWidget {
       _driver.getText(_finder, timeout: timeout);
 }
 
-///  [DScrollItem] represents item in scrollable widget.
-///  It allows to scroll to given item in list.
+/// [DScrollItem] represents item in scrollable widget.
+/// It allows to scroll to given item in list.
 ///
 /// See README.md for example.
 class DScrollItem extends DWidget {
