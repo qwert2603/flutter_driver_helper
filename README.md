@@ -1,5 +1,7 @@
 # Flutter Driver Helper
 
+[![pub package](https://img.shields.io/pub/v/flutter_driver_helper.svg)](https://pub.dartlang.org/packages/flutter_driver_helper)
+
 Utility for easy work with flutter_driver in UI / integration tests
 
 # Why?
