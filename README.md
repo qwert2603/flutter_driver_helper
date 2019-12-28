@@ -2,13 +2,13 @@
 
 Utility for easy work with flutter_driver in UI / integration tests
 
-## Getting Started
+# Why?
 
 Flutter Driver Helper has several useful utilities for writing UI / integration tests.
 
 Usual Flutter Driver test looks like
 
-```
+```dart
 final list = find.byValueKey("list");
 final item42 = find.byValueKey("item_42");
 final secondScreen = find.byValueKey("second_screen");
@@ -22,7 +22,7 @@ await driver.tap(find.pageBack());
 
 This may be rewritten with Flutter Driver Helper to more readable style:
 
-```
+```dart
 class MainScreen extends BaseScreen {
   MainScreen(FlutterDriver driver) : super(driver);
 
@@ -50,9 +50,9 @@ await runTestActions([
   secondScreen.pageBack.tap(),
 ]);
 ```
+# Advantages
 
-With screens (Page Objects) we separate UI-elements from actions and can reuse these screens in several tests.
+* With screens (Page Objects) we separate UI-elements from actions and can reuse these screens in several tests.
+* Also we get rid of `await` on every line, that was easy to forget to write.
 
-Also we get rid of `await` on every line, that was easy to forget to write.
-
-Full example is in "example" dir.
+# Full example is in [example](https://github.com/qwert2603/flutter_driver_helper/tree/master/example) dir.
