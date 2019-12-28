@@ -58,3 +58,7 @@ await runTestActions([
 * Also we get rid of `await` on every line, that was easy to forget to write.
 
 # Full example is in [example](https://github.com/qwert2603/flutter_driver_helper/tree/master/example) dir.
+
+# Screenshots
+
+For convenient screenshots making diring UI tests You can use [Screenshoter](https://github.com/qwert2603/flutter_driver_helper/blob/master/lib/src/screenshoter.dart).
