@@ -108,21 +108,5 @@ void main() {
       },
       timeout: timeout,
     );
-
-    test(
-      'test five',
-      () async {
-        final list = find.byValueKey("list");
-        final item42 = find.byValueKey("item_42");
-        final secondScreen = find.byValueKey("second_screen");
-
-        await driver.tap(secondScreen);
-        await driver.waitForAbsent(item42);
-        await driver.scrollUntilVisible(list, item42);
-        await driver.waitFor(item42);
-        await driver.tap(find.pageBack());
-      },
-      timeout: timeout,
-    );
   });
 }

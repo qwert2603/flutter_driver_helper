@@ -1,9 +1,11 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'restart_app.dart';
 import 'test_hooks.dart';
 
 void main() {
+  debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
   runApp(StreamBuilder<String>(
     stream: restartAppStream,
     builder: (context, snapshot) {
