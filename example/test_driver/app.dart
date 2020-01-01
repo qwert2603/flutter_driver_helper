@@ -1,18 +1,26 @@
+import 'dart:async';
+
+import 'package:example/main.dart';
+import 'package:example/test_hooks.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_driver/driver_extension.dart';
-
-import '../lib/restart_app.dart';
-import '../lib/test_hooks.dart';
-import '../lib/main.dart' as app;
+import 'package:flutter_driver_helper/src/restart_widget.dart';
 
 void main() {
+  debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
+
+  // ignore: close_sinks
+  final StreamController<String> restartController = StreamController<String>()
+    ..add("restart");
+
   enableFlutterDriverExtension(
     handler: (request) async {
       if (request == "restart") {
-        await makeRestart();
+        restartController.add("restart");
         await Future.delayed(const Duration(milliseconds: 200));
       }
-      if (request.startsWith("select_time")) {
+      if (request == "select_time") {
         selectTime = ({
           BuildContext context,
           TimeOfDay initialTime,
@@ -22,5 +30,9 @@ void main() {
       return null;
     },
   );
-  app.main();
+
+  runApp(RestartWidget(
+    stream: restartController.stream,
+    builder: (context, data) => MyApp(),
+  ));
 }

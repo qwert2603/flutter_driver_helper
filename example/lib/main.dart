@@ -1,17 +1,12 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import 'restart_app.dart';
 import 'test_hooks.dart';
 
 void main() {
+  // needed to run on Linux
   debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
-  runApp(StreamBuilder<String>(
-    stream: restartAppStream,
-    builder: (context, snapshot) {
-      return snapshot.data == null ? SizedBox() : MyApp();
-    },
-  ));
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -136,11 +131,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: TextStyle(fontSize: 20.0),
                 ),
               ],
-              SizedBox(height: 12),
-              FlatButton(
-                onPressed: makeRestart,
-                child: Text("makeRestart"),
-              ),
             ],
           ),
         ),
