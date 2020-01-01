@@ -1,11 +1,18 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'test_hooks.dart';
 
+void setTargetPlatformForDesktop() {
+  if (Platform.isLinux || Platform.isWindows) {
+    debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
+  }
+}
+
 void main() {
-  // needed to run on Linux
-  debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
+  setTargetPlatformForDesktop();
   runApp(MyApp());
 }
 
