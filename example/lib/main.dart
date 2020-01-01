@@ -66,7 +66,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 key: ValueKey("field_2"),
                 items: List.generate(20, (i) {
                   return DropdownMenuItem<int>(
-                    key: ValueKey("variant_item_$i"),
                     child: Text(
                       "it is $i",
                       key: ValueKey("variant_$i"),
@@ -186,7 +185,7 @@ class SecondScreen extends StatelessWidget {
               key: ValueKey("item_$index"),
             ),
           ),
-          itemCount: 100,
+          itemCount: 10000,
         ),
       ),
     );
