@@ -1,4 +1,4 @@
-typedef TestAction = Future Function();
+typedef TestAction = Future<dynamic> Function();
 
 /// Run list of [actions] sequentially,
 /// awaiting for each action to compete before starting next action.
