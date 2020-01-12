@@ -64,6 +64,9 @@ class DWidget {
 
   Future<String> getText({Duration timeout}) =>
       _driver.getText(_finder, timeout: timeout);
+
+  Future<DriverOffset> getCenter({Duration timeout}) =>
+      _driver.getCenter(_finder, timeout: timeout);
 }
 
 /// [DScrollItem] represents item in scrollable widget.

@@ -103,6 +103,8 @@ void main() {
           secondScreen.item(42).waitForAbsent(),
           secondScreen.item(42).scrollUntilVisible(dyScroll: -300),
           secondScreen.item(42).waitFor(),
+          () async => print(await secondScreen.item(42).getCenter()),
+          () async => print(await secondScreen.item(43).getCenter()),
           secondScreen.pageBack.tap(),
         ]);
       },
