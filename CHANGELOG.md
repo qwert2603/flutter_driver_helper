@@ -1,3 +1,7 @@
+## [1.0.2] - 12.01.2020.
+
+* Fix health issue.
+
 ## [1.0.1] - 12.01.2020.
 
 * Updated example
