@@ -83,7 +83,7 @@ void main() {
 
         await runTestActions([
           mainScreen.time.waitForAbsent(),
-          () => driver.requestData("select_time"),
+          TestAction(() => driver.requestData("select_time")),
           mainScreen.selectTime.tap(),
           mainScreen.time.waitFor(),
           mainScreen.time.hasText("TimeOfDay(12:28)"),

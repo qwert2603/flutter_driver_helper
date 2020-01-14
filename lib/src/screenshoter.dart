@@ -29,5 +29,6 @@ class Screenshoter {
     File("$_screensDir/${_nextScreenId++}_$name.png").writeAsBytesSync(bytes);
   }
 
-  TestAction screenshot(String name) => () => saveScreen(name);
+  TestAction screenshot(String name) =>
+      TestAction(() => saveScreen(name), name: "take screenshot $name");
 }
