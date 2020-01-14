@@ -4,7 +4,7 @@ import 'package:example/main.dart';
 import 'package:example/test_hooks.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_driver/driver_extension.dart';
-import 'package:flutter_driver_helper/src/restart_widget.dart';
+import 'package:flutter_driver_helper/restart_widget.dart';
 
 void main() {
   setTargetPlatformForDesktop();
