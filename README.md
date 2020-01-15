@@ -4,6 +4,8 @@
 
 Utility for easy work with flutter_driver in UI / integration tests
 
+## [Article](https://habr.com/en/post/483468/) with description (Russian).
+
 # Advantages
 
 * With screens (Page Objects) we separate UI-elements from actions and can reuse these screens in several tests.
