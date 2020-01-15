@@ -4,7 +4,15 @@
 
 Utility for easy work with flutter_driver in UI / integration tests
 
-# Why?
+# Advantages
+
+* With screens (Page Objects) we separate UI-elements from actions and can reuse these screens in several tests.
+* Also we get rid of `await` on every line, that was easy to forget to write.
+* Logging actions while testing
+
+# Full example is in [example](https://github.com/qwert2603/flutter_driver_helper/tree/master/example) dir.
+
+# Example
 
 Flutter Driver Helper has several useful utilities for writing UI / integration tests.
 
@@ -54,12 +62,24 @@ await runTestActions([
   secondScreen.pageBack.tap(),
 ]);
 ```
-# Advantages
 
-* With screens (Page Objects) we separate UI-elements from actions and can reuse these screens in several tests.
-* Also we get rid of `await` on every line, that was easy to forget to write.
+# Logging
 
-# Full example is in [example](https://github.com/qwert2603/flutter_driver_helper/tree/master/example) dir.
+Method `runTestActions` logs executed actions like this:
+
+```
+Running check result hasText summa = 0
+Running setText 12 on field_1
+Running check result hasText summa = 12
+Running tap on field_2
+Running take screenshot field_2_variants
+Running tap on variant_4
+Running check result hasText summa = 16
+Running tap on button_snackbar
+Running tap on variant_2
+Running check result hasText summa = 5
+Running scrollUntilVisible list item_42
+```
 
 # Screenshots
 
