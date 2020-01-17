@@ -16,8 +16,10 @@ abstract class BaseScreen {
 
   BaseScreen(this._driver);
 
+  @protected
   DWidget dWidget(dynamic key) => DWidget(_driver, key);
 
+  @protected
   DWidget dScrollItem(dynamic key, DWidget scrollable) =>
       DScrollItem(_driver, key, scrollable);
 
