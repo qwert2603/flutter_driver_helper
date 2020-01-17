@@ -85,7 +85,16 @@ class DWidget {
       TestAction(
         () => _driver.scrollIntoView(_finder,
             alignment: alignment, timeout: timeout),
-        name: "scrollIntoView $_name",
+        name: "scrollIntoView $_name $alignment",
+      );
+
+  TestAction scroll(
+          SerializableFinder finder, double dx, double dy, Duration duration,
+          {int frequency = 60, Duration timeout}) =>
+      TestAction(
+        () => _driver.scroll(finder, dx, dy, duration,
+            frequency: frequency, timeout: timeout),
+        name: "scroll $_name dx=$dx dy=$dy",
       );
 
   Future<String> getText({Duration timeout}) =>
