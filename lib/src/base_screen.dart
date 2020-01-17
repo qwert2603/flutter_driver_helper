@@ -88,11 +88,15 @@ class DWidget {
         name: "scrollIntoView $_name $alignment",
       );
 
-  TestAction scroll(
-          SerializableFinder finder, double dx, double dy, Duration duration,
-          {int frequency = 60, Duration timeout}) =>
+  TestAction scroll({
+    double dx = 0,
+    double dy = 0,
+    Duration duration = const Duration(milliseconds: 300),
+    int frequency = 60,
+    Duration timeout,
+  }) =>
       TestAction(
-        () => _driver.scroll(finder, dx, dy, duration,
+        () => _driver.scroll(_finder, dx, dy, duration,
             frequency: frequency, timeout: timeout),
         name: "scroll $_name dx=$dx dy=$dy",
       );
