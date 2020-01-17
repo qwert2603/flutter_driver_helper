@@ -7,7 +7,7 @@ import 'test_action.dart';
 /// Utility class for making screenshots during integrations tests.
 ///
 /// Screenshots are saved to dir "baseScreensDir/${current date-time}/".
-/// Each screenshot's name is prefixed with it's index.
+/// Each screenshot's name is prefixed with it's index (may be disabled).
 /// Directory is created automatically.
 ///
 /// May be disabled with corresponding constructor param.
@@ -31,7 +31,8 @@ class Screenshoter {
   Future<void> saveScreen(String name) async {
     if (!enabled) return;
     final bytes = await _driver.screenshot();
-    final path = "$_screensDir/${withIndices ? _nextScreenId++ : ""}_$name.png";
+    final namePrefix = withIndices ? "${_nextScreenId++}_" : "";
+    final path = "$_screensDir/$namePrefix$name.png";
     File(path).writeAsBytesSync(bytes);
   }
 
