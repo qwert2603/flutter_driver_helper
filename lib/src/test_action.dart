@@ -18,3 +18,8 @@ Future<void> runTestActions(Iterable<TestAction> actions) async {
     await testAction.action();
   }
 }
+
+TestAction idle(int millis) => TestAction(
+      () => Future.delayed(Duration(milliseconds: millis)),
+      name: "idle $millis millis",
+    );

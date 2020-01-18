@@ -46,6 +46,7 @@ void main() {
           screenshoter.screenshot("field_2_variants"),
           mainScreen.field2Variant(4).tap(),
           mainScreen.result.hasText("summa = 16"),
+          idle(1000),
           mainScreen.buttonSnackbar.tap(),
           mainScreen.snackbarText.waitFor(),
           mainScreen.actionMake7.tap(),
