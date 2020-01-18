@@ -64,6 +64,33 @@ class DWidget {
         name: "check $_name hasText $text",
       );
 
+  TestAction textEndsWith(String s, {Duration timeout}) => TestAction(
+        () async {
+          final actualText = await getText(timeout: timeout);
+          print("check text ends with actualText=$actualText");
+          expect(actualText.endsWith(s), true);
+        },
+        name: "check text ends with $_name $s",
+      );
+
+  TestAction textStartsWith(String s, {Duration timeout}) => TestAction(
+        () async {
+          final actualText = await getText(timeout: timeout);
+          print("check text starts with actualText=$actualText");
+          expect(actualText.startsWith(s), true);
+        },
+        name: "check text starts with $_name $s",
+      );
+
+  TestAction textContains(String s, {Duration timeout}) => TestAction(
+        () async {
+          final actualText = await getText(timeout: timeout);
+          print("check text contains with actualText=$actualText");
+          expect(actualText.contains(s), true);
+        },
+        name: "check text contains with $_name $s",
+      );
+
   TestAction setText(String text, {Duration timeout}) => TestAction(
         () async {
           await _driver.tap(_finder, timeout: timeout);
