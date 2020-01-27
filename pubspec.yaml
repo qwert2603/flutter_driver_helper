@@ -1,6 +1,6 @@
 name: flutter_driver_helper
 description: Utility for easy work with flutter_driver in UI / integration tests
-version: 1.1.0
+version: 1.1.1
 homepage: https://github.com/qwert2603/flutter_driver_helper
 
 environment:
