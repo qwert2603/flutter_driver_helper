@@ -19,7 +19,18 @@ Future<void> runTestActions(Iterable<TestAction> actions) async {
   }
 }
 
+/// Just wait for some time.
 TestAction idle(int millis) => TestAction(
       () => Future.delayed(Duration(milliseconds: millis)),
       name: "idle $millis millis",
+    );
+
+/// Create named group of steps.
+TestAction step(
+  String name,
+  List<TestAction> actions,
+) =>
+    TestAction(
+      () => runTestActions(actions),
+      name: 'step "$name"',
     );
